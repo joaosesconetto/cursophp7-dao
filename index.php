@@ -32,9 +32,42 @@ $msg->echoMsg($texto);
 // echo json_encode($search);
 
 // carrega um usuário usando o login e a senha
-$usuario = new Usuario();
+// $usuario = new Usuario();
 // utilizando o metódo login;
-$usuario->login("joao", "999");
+// $usuario->login("joao", "jbs");
+// echo $usuario;
+
+// $aluno = new Usuario();
+
+// $aluno->setDeslogin("aluno");
+// $aluno->setDessenha("@360");
+
+// $aluno->insert();
+
+// A chamada de insert acima foi modificada para ficar ainda mais enchuta. Foi criado um método construtor no arquivo Usuario.php "public function __construct($login = "", $password = "")", para substituir as duas linhas dos Set's retiradas acima.
+
+// O trecho abaixo insere um registro e retorna os dados no select;
+// $texto = "Passo 2.0 estancia a classe Usuario no arquivo config"."<br>";
+// $msg = new Passei_por_aqui();
+// $msg->echoMsg($texto);
+
+// $aluno = new Usuario('PEDRO','456' );
+
+// $aluno->insert();
+
+// echo $aluno;
+
+// No trecho abaixo altera um registro da tabela de usuários
+$texto = "Passo 2.0 estancia a classe Usuario no arquivo config"."<br>";
+$msg = new Passei_por_aqui();
+$msg->echoMsg($texto);
+
+$usuario = new Usuario();
+
+$usuario->loadById(3);
+
+$usuario->update("Vera Márcia", "vvvbbb");
+
 echo $usuario;
 ?>
 
